@@ -1,38 +1,27 @@
 import NavBar from './component/navbar'
-import Card from './component/card.jsx' 
+import SearchBar from './component/searchBar' 
+import Card from './component/card.jsx'
+import Carousel from './component/carousel.jsx'
+import Footer from './component/footer.jsx'
+import Hero from './component/hero.jsx' 
 
 function App() {
   
   return (
     <>
-      <div className="container-fluid px-0">
-        <NavBar/>
-      </div>
-      <div className="container-fluid text-center bg-success-subtle">
-        <div className="row">
-          <div className="col">
-            <Card></Card>
-          </div>
-          <div className="col">
-          <Card></Card>
-          </div>
-          <div className="col">
-          <Card></Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <Card></Card>
-          </div>
-          <div className="col">
-          <Card></Card>
-          </div>
-          <div className="col">
-          <Card></Card>
-          </div>
-        </div>
         
+        <NavBar/>
+        <Hero></Hero>
+        <hr className='text-success mx-2' />
+        <SearchBar></SearchBar>
+      <div className="container-fluid text-center bg-success-subtle">
+        <Card></Card>
       </div>
+      <hr className='text-success mx-2' />
+      <div className="container-fluid text-center bg-success-subtle">
+        <Carousel></Carousel>
+      </div>
+        <Footer></Footer>
     </>
   )
 }
