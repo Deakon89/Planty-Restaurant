@@ -1,11 +1,11 @@
-function Card() {
+function Card(recipe) {
     return (
          <div className="card mx-3 my-5" style={{maxWidth:"20rem"}}>
-            <img src="#" className="card-img-top" alt="..."/>
+            <img src={"https://img.spoonacular.com/recipes/"+recipe.id+"/-312x231.jpg"} className="card-img-top" alt={recipe.title}/>
             <div className="card-body">
-                <h5 className="card-title text-success">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-                <a href="#" className="btn btn-success text-warning">Go somewhere</a>
+                <h5 className="card-title text-success">{recipe.title}</h5>
+                <p className="card-text">{recipe.description}</p>
+                <a href="#" className="btn btn-success text-warning">Recipe Info!</a>
             </div>
         </div>
     )
