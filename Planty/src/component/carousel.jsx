@@ -15,20 +15,17 @@ function Carousel(){
      })
    }, [])
 
-    return (
-        <>
+    return ( 
         <div className="container-fluid  text-center bg-success-subtle">
             <h2 className="text-success">Popular Vegetarian Recipes</h2>
-        </div>
-  
-        <div className="container-fluid overflow-scroll text-center bg-success-subtle" style={{height:"50rem"}}>   
-          <div className="row row-cols-1 g-4">
+            <div className="container-fluid overflow-scroll text-center bg-success-subtle" style={{height:"50rem"}}>   
+            <div className="row row-cols-1 g-4">
                 {recipes.map((recipe) => {
                     return <Card key={recipe.id} {...recipe} />
                     })}
-          </div>         
-        </div>      
-    </>
+            </div>         
+            </div>
+        </div>         
     )
 }
 

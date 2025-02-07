@@ -1,34 +1,25 @@
 import { useState } from 'react'
-import Card from './card'
+import Card from '../component/card'
 import axios from 'axios'
+
 function SearchBar(){
     const [searchQuery, setSearchQuery] = useState("")
     const [recipes, setRecipes] = useState([])
-    // const [carousel, setCarousel] = useState([])
-
     const apiKey="408814722ef44110b32ac948f30d3c14"
-    // const recipeUrl="https://api.spoonacular.com/recipes/complexSearch?"+"apiKey="+apiKey+"&diet=vegetarian&number=100"
     const searchUrl="https://api.spoonacular.com/recipes/complexSearch?"+"apiKey="+apiKey+"&diet=vegetarian&query="+searchQuery+"&number=10" 
-    // const infoUrl="https://api.spoonacular.com/recipes/"+{id}+"/information?apiKey="+apiKey
-    // let id
-
-  //  useEffect(() =>{
-  //   axios.get(recipeUrl).then((response) => {
-  //     setCarousel(response.data.results)
-  //     console.log(response.data.results)
-  //    })
-  //  }, [])
-
+    
   const handleSearch = (e) => {
     e.preventDefault() 
       if(searchQuery !== "") {
         axios.get(searchUrl).then((response) => {
           setRecipes(response.data.results)
           console.log(response.data.results)
-        })  
+        }).catch (error) {
+          alert(error)
+        }  
       }    
      }
-  
+
     return (
         <>
         <div className="container-fluid px-5 my-5 text-center" >

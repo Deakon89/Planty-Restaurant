@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 function Card(recipe) {
     return (
          <div className="card mx-auto my-5" style={{maxWidth:"18rem"}}>
@@ -5,7 +6,7 @@ function Card(recipe) {
             <div className="card-body">
                 <h5 className="card-title text-success">{recipe.title}</h5>
                 <p className="card-text">{recipe.description}</p>
-                <a href="#" className="btn btn-success text-warning">Recipe Info!</a>
+                <Link className="btn btn-success text-warning" to="/infoRecipePage" >Recipe info</Link>
             </div>
         </div>
     )
