@@ -2,14 +2,16 @@ import { useState } from 'react'
 import Card from '../component/card'
 import axios from 'axios'
 
+
 function SearchBar(){
     const [searchQuery, setSearchQuery] = useState("")
     const [recipes, setRecipes] = useState([])
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
 
-    const apiKey="408814722ef44110b32ac948f30d3c14"
-    const searchUrl="https://api.spoonacular.com/recipes/complexSearch?"+"apiKey="+apiKey+"&diet=vegetarian&query="+searchQuery+"&number=10" 
+    // const apiKey="408814722ef44110b32ac948f30d3c14"
+    const apiKey2="2466e011a8a341e2a441223702fb2a43"
+    const searchUrl="https://api.spoonacular.com/recipes/complexSearch?"+"apiKey="+apiKey2+"&diet=vegetarian&query="+searchQuery+"&number=10" 
     
   const handleSearch = (e) => {
     e.preventDefault()
@@ -45,7 +47,6 @@ function SearchBar(){
             </form>
         </div>
         <hr className='text-success mx-2' />
-
             {
               error ? (
                 <div className="d-flex justify-content-center">
@@ -64,7 +65,7 @@ function SearchBar(){
         <div className="container-fluid text-center bg-success-subtle">
           <div className="row row-cols-1 g-4">
                 {recipes.map((recipe) => {
-                    return <Card key={recipe.id} {...recipe} />
+                    return <><Card key={recipe.id} {...recipe} /></>
                     })}
           </div>             
         </div>

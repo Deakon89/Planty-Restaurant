@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import Card from "./card"
-// import { useDispatch, useSelector } from 'react-redux'
-// import { fetchRecipes } from '../redux/axiosSlice'
-
 
 function Carousel(){
      const [recipes, setRecipes] = useState([])
-     const apiKey="408814722ef44110b32ac948f30d3c14"
-     const recipeUrl="https://api.spoonacular.com/recipes/complexSearch?"+"apiKey="+apiKey+"&diet=vegetarian&&number=100" 
+    //  const apiKey="408814722ef44110b32ac948f30d3c14"
+     const apiKey2="2466e011a8a341e2a441223702fb2a43"
+     const recipeUrl="https://api.spoonacular.com/recipes/complexSearch?"+"apiKey="+apiKey2+"&diet=vegetarian&&number=100" 
     
   useEffect(() => {
      axios.get(recipeUrl).then((response) => {
@@ -16,13 +14,6 @@ function Carousel(){
        console.log(response.data.results)
       })
    }, [])
-
-    // const dispatch = useDispatch()
-    // const recipes = useSelector((state) => state.recipe.recipes)
-    // console.log(recipes)
-    // useEffect(() => {
-    //     dispatch(fetchRecipes())
-    // })
 
     return ( 
          <div className="container-fluid  text-center bg-success-subtle">
