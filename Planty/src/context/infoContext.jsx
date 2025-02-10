@@ -5,6 +5,7 @@ import { InfoContext } from "./context";
 
 export const InfoProvider = ({ children }) => {
     const [info, setInfo] = useState({});
+    const [error, setError] = useState(false);  
 
     InfoProvider.propTypes = {
         children: PropTypes.node.isRequired,
@@ -12,19 +13,25 @@ export const InfoProvider = ({ children }) => {
 
     useEffect(() => {
         if (info) {
-            // const apiKey="408814722ef44110b32ac948f30d3c14"
-            const apiKey2="2466e011a8a341e2a441223702fb2a43"
-            const recipeUrl="https://api.spoonacular.com/recipes/"+info+"/information?"+"apiKey="+apiKey2
+            const apiKey2 = "2466e011a8a341e2a441223702fb2a43";
+            const recipeUrl = `https://api.spoonacular.com/recipes/${info}/information?apiKey=${apiKey2}`;
 
-            axios.get(recipeUrl).then((response) => {
-                setInfo(response.data)
-                console.log(response.data)
-               })
+            axios.get(recipeUrl)
+                .then((response) => {
+                    setInfo(response.data);
+                })
+                .catch((error) => {
+                    console.error('Error fetching recipe information:', error);
+                    alert("Ops! Something went wrong");
+                    setError(true);
+                });
         }
-    }, [info])
+    }, [info]);
+
+
 
     return (
-        <InfoContext.Provider value={{info, setInfo}}>
+        <InfoContext.Provider value={{info, setInfo, error, setError}}>
             {children}
         </InfoContext.Provider> 
     )
