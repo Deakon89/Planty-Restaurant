@@ -6,7 +6,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     headers: {
-      "content-type": "application/javascript"
-    }
-  }
+      'Content-Type': 'application/javascript',
+    },
+
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 })
+
