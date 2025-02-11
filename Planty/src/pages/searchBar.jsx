@@ -2,17 +2,16 @@ import { useState, useEffect } from 'react'
 import Card from '../component/card'
 import axios from 'axios'
 
-
 function SearchBar(){
     const [searchQuery, setSearchQuery] = useState("")
     const [recipes, setRecipes] = useState([])
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
 
-    const apiKey="408814722ef44110b32ac948f30d3c14"
-    // const apiKey2="2466e011a8a341e2a441223702fb2a43"
-    const searchUrl="https://api.spoonacular.com/recipes/complexSearch?"+"apiKey="+apiKey+"&diet=vegetarian&query="+searchQuery+"&number=10" 
-    
+    // const apiKey="408814722ef44110b32ac948f30d3c14"
+    const apiKey2="2466e011a8a341e2a441223702fb2a43"
+    const searchUrl="https://api.spoonacular.com/recipes/complexSearch?"+"apiKey="+apiKey2+"&diet=vegetarian&query="+searchQuery+"&number=10" 
+    // call the API for research
   const handleSearch = async (e) => {
     e.preventDefault()
     if (searchQuery !== "") {
@@ -36,7 +35,7 @@ function SearchBar(){
       }
     }
   }
-
+  // set timing for loading
   useEffect(() => { 
     if (searchQuery === "") {
       setLoading(false)
@@ -46,7 +45,6 @@ function SearchBar(){
     }, 5000)}  
   }, [])
 
- 
 
     return (
         <>
@@ -58,9 +56,10 @@ function SearchBar(){
               <button className="btn btn-outline-warning text-warning bg-success " type="submit">Search</button>
             </form>
         </div>
-        {/* <hr className='text-success mx-2' /> */}
+        
         <div> 
         </div>
+        {/* show the result */}
             {
               error ? (
                 <div className="d-flex justify-content-center">

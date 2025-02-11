@@ -19,21 +19,6 @@ return(
             </div>
             </div>
         </div>       
-    // </nav>
-    // <nav className="navbar bg-body-success ">
-    //         <div className="row">
-    //             <div className="col">
-                
-    //             </div>
-    //             <div className="col">
-    //                 <h6>Copyright © 2025 Planty</h6>
-    //             </div>
-    //             <div className="col">
-    //                 
-    //             </div>
-    //         </div>
-       
-    // </nav>
 )
 }
 

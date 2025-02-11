@@ -10,22 +10,23 @@ export const InfoProvider = ({ children }) => {
     InfoProvider.propTypes = {
         children: PropTypes.node.isRequired,
       };
-
+// call the API for research info
     useEffect(() => {
-        if (info) {
-            const apiKey2 = "2466e011a8a341e2a441223702fb2a43";
-            const recipeUrl = `https://api.spoonacular.com/recipes/${info}/information?apiKey=${apiKey2}`;
+        const fetchRecipeInfo = async () => {
+            if (info) {
+                const apiKey2 = "2466e011a8a341e2a441223702fb2a43";
+                const recipeUrl = `https://api.spoonacular.com/recipes/${info}/information?apiKey=${apiKey2}`;
 
-            axios.get(recipeUrl)
-                .then((response) => {
+                try {
+                    const response = await axios.get(recipeUrl);
                     setInfo(response.data);
-                })
-                .catch((error) => {
+                } catch (error) {
                     console.error('Error fetching recipe information:', error);
-                    alert("Ops! Something went wrong");
                     setError(true);
-                });
-        }
+                }
+            }
+        };
+        fetchRecipeInfo();
     }, [info]);
 
 
