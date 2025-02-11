@@ -8,11 +8,17 @@
   width: 50%;
 }
 
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
 @media screen and (max-width: 650px) {
   h6{
     display: none;
   }
-  a{
+  .lime{
     display: none;
   }
   

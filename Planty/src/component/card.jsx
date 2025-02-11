@@ -13,7 +13,7 @@ function Card(recipe) {
 
     return (
         // recipe card
-         <div className="card mx-auto my-5" style={{maxWidth:"18rem"}}>
+         <div className="card mx-auto my-5 p-0 shadow" style={{maxWidth:"18rem"}}>
             <img src={"https://img.spoonacular.com/recipes/"+recipe.id+"-312x231.jpg"} className="card-img-top" alt={recipe.title}/>
             <div className="card-body">
                 <h5 className="card-title text-success">{recipe.title}</h5>

@@ -6,16 +6,21 @@ return(
         <div className="container-fluid p-auto bg-success">
             <div className="row ms-3">
             <div className="col-4">
-                <a href="#"><img src="/src/assets/lime.png" alt="lime" /></a>
+                <a className="lime" href="#"><img src="/src/assets/lime.png" alt="lime" /></a>
             </div>
             <div className="col-4 d-flex justify-content-end text-warning">
             <h6 className="my-3">Copyright © 2025 Planty - All rights reserved - DMGProduct</h6>
             </div>
             <div className="col-4 d-flex justify-content-end" > 
-            <i className="bi bi-github text-warning mx-3 my-3" style={{fontSize:"2,8rem"}}></i>
-            <i className="bi bi-facebook text-warning mx-3 my-3" style={{fontSize:"2,8rem"}}></i>
-            <i className="bi bi-instagram text-warning mx-3 my-3" style={{fontSize:"2,8rem"}}></i>
-            <i className="bi bi-steam text-warning mx-3 my-3" style={{fontSize:"2,8rem"}}></i>
+            <a href="https://github.com/Deakon89/portfolio.git" target="_blank" >
+           <i className="bi bi-github text-warning mx-3 my-3"></i> 
+           </a>
+            <a href="https://www.facebook.com/francesco.cocchi.54" target="_blank" >
+            <i className="bi bi-facebook text-warning mx-3 my-3"></i>
+            </a>
+            <a href="https://www.instagram.com/cocchi647/" target="_blank" >
+            <i className="bi bi-instagram text-warning mx-3 my-3" ></i>
+            </a>
             </div>
             </div>
         </div>       
