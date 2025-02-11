@@ -27,7 +27,7 @@ function Carousel(){
 
     return ( 
          <div className="container-fluid  text-center bg-success-subtle">
-             <img className="img-fluid" src="/src/assets/planty-recommend.png" alt="planty-recommend" />
+             <img className="img-fluid" src="/assets/planty-recommend.png" alt="planty-recommend" />
              <div className="container-fluid overflow-scroll text-center bg-success-subtle" style={{height:"50rem"}}>   
              <div className="row row-cols-1 g-4">
                 {error && <p>Ops! Something went wrong</p>}
