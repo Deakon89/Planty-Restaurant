@@ -23,19 +23,19 @@ Eventuali aggiornamenti riguardo nuove funzionalità saranno aggiunte nel presen
 
 ##  display di ricerca
 
-![search](/src/assets/Screenshot%202025-02-11%20123159.png) 
+![search](/assets/Screenshot%202025-02-11%20123159.png) 
 
 --- 
 
 ## Sezione Carousel 
 
-![carousel](/src/assets/Screenshot%202025-02-11%20123237.png)
+![carousel](/assets/Screenshot%202025-02-11%20123237.png)
 
 ---
 
 ## infoPage descrizione 
 
-![info](/src/assets/Screenshot%202025-02-11%20123258.png)
+![info](/assets/Screenshot%202025-02-11%20123258.png)
 
 ---
 
