@@ -10,4 +10,7 @@ export default defineConfig({
       'jsx': 'text/javascript',
     }
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  }
 })
