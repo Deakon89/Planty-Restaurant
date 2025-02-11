@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 function InfoPage() {
   // use the context for share props
   const { info } = useInfoContext()
-
+  
   return (
     <div className="info">
       <div className="container-fluid text-start">
