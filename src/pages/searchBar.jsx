@@ -3,6 +3,8 @@ import Card from '../component/card'
 import axios from 'axios'
 import search from '../assets/planty-search.png'
 
+
+
 function SearchBar(){
     const [searchQuery, setSearchQuery] = useState("")
     const [recipes, setRecipes] = useState([])
@@ -48,7 +50,7 @@ function SearchBar(){
 
     return (
         <>
-        <div className="container-fluid px-5 my-5 text-center" >    
+        <div className="container-fluid p-5 text-center" >   
           <img className='img-fluid mb-5' src={search} alt="planty-search" />
             <form className="input-group" role="search" onSubmit={handleSearch}>
               <input className="form-control mx-auto" type="search" placeholder="Search" aria-label="Search"

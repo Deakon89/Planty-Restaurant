@@ -16,17 +16,14 @@ function App() {
     <>
         <InfoProvider>  
         <NavBar/>
-        {/* main grid */}
-        <div className="container-fluid text-center bg-success-subtle">
+        {/* main grid */}  
         <Suspense fallback={<div className="spinner-border" role="status"></div>}>
           <Routes> 
             <Route path="/" element={ <SearchBar/>} />
             <Route path="/infoRecipePage" element={<InfoPage/>} />
           </Routes>
         </Suspense>
-        </div>
         {/* --- */}
-        <hr className='text-success mx-2' />
         <Hero/>
         <hr className='text-success mx-2' />  
         <Carousel/>
