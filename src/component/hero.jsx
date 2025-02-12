@@ -1,4 +1,4 @@
-import lemonHero from "/assets/lemon hero xl.jpg"
+import lemonHero from "../assets/lemon hero xl.jpg"
 function Hero(){
  
     return(    
