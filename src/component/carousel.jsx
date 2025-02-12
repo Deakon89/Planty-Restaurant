@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import Card from "./card"
-
+import recommend from "../assets/planty-recommend.png"
 function Carousel(){
      const [recipes, setRecipes] = useState([])
      const [error, setError] = useState(false)
@@ -27,7 +27,7 @@ function Carousel(){
 
     return ( 
          <div className="container-fluid  text-center bg-success-subtle">
-             <img className="img-fluid" src="/assets/planty-recommend.png" alt="planty-recommend" />
+             <img className="img-fluid" src={recommend} alt="planty-recommend" />
              <div className="container-fluid overflow-scroll text-center bg-success-subtle" style={{height:"50rem"}}>   
              <div className="row row-cols-1 g-4">
                 {error && <p>Ops! Something went wrong</p>}
