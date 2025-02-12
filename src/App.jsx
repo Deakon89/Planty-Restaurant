@@ -16,6 +16,7 @@ function App() {
     <>
         <InfoProvider>  
         <NavBar/>
+        <Hero/>
         {/* main grid */}  
         <Suspense fallback={<div className="spinner-border" role="status"></div>}>
           <Routes> 
@@ -23,8 +24,7 @@ function App() {
             <Route path="/infoRecipePage" element={<InfoPage/>} />
           </Routes>
         </Suspense>
-        {/* --- */}
-        <Hero/>
+        {/* --- */} 
         <hr className='text-success mx-2' />  
         <Carousel/>
         <Footer/>    
