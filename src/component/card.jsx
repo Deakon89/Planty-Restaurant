@@ -8,7 +8,7 @@ function Card(recipe) {
 
     const handleClick = () => {
         setInfo(recipe.id)
-        scrollTo()
+        scrollTo(0,0)
     } 
 
     return (
