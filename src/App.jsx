@@ -15,9 +15,7 @@ function App() {
   return (
     <>
         <InfoProvider>  
-        <NavBar/> 
-        <Hero/>
-        <hr className='text-success mx-2' />
+        <NavBar/>
         {/* main grid */}
         <div className="container-fluid text-center bg-success-subtle">
         <Suspense fallback={<div className="spinner-border" role="status"></div>}>
@@ -28,6 +26,8 @@ function App() {
         </Suspense>
         </div>
         {/* --- */}
+        <hr className='text-success mx-2' />
+        <Hero/>
         <hr className='text-success mx-2' />  
         <Carousel/>
         <Footer/>    

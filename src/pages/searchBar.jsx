@@ -46,10 +46,9 @@ function SearchBar(){
     }, 5000)}  
   }, [])
 
-
     return (
         <>
-        <div className="container-fluid px-5 my-5 text-center" >
+        <div className="container-fluid px-5 my-5 text-center" >    
           <img className='img-fluid mb-5' src={search} alt="planty-search" />
             <form className="input-group" role="search" onSubmit={handleSearch}>
               <input className="form-control mx-auto" type="search" placeholder="Search" aria-label="Search"
