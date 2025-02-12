@@ -1,9 +1,9 @@
-
+import lemonHero from "/assets/lemon hero xl.jpg"
 function Hero(){
  
     return(    
     <div className="container-fluid  p-0">
-        <img src="/assets/lemon hero xl.jpg" className="img-fluid" alt="Hero"></img>
+        <img src={lemonHero} className="img-fluid" alt="Hero"></img>
     </div>
     )
 }
