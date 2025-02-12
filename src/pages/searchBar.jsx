@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Card from '../component/card'
 import axios from 'axios'
-import search from '../assets/search.png'
+import search from '../assets/planty-search.png'
 
 function SearchBar(){
     const [searchQuery, setSearchQuery] = useState("")
