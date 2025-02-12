@@ -1,6 +1,6 @@
 # **Planty** 
 
-## link al progetto-->[Planty](https://plantyfood.netlify.app/)
+## link al progetto-->![Planty](https://plantyfood.netlify.app/)
 
 ## **Descrizione**  
 
